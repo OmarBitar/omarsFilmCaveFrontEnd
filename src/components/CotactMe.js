@@ -29,6 +29,10 @@ class ContactMe extends React.Component {
       )
     }
   
+    function openInNewTab(url) {
+      var win = window.open(url, '_blank');
+      win.focus();
+    }
 
     return ( 
     <div> 
@@ -36,8 +40,8 @@ class ContactMe extends React.Component {
       <br />
       <br />
        <h2> I currently live in Colorado, feel free to contact me via the links below </h2>
-      <a href="https://www.facebook.com/omar.bitar.1997" className="fa fa-facebook"> </a>
-      <a href="https://www.youtube.com/channel/UCAk3PDdXPdoyl4ZzYiuggxA" className="fa fa-youtube"> </a>
+      <a onClick={() => openInNewTab('https://www.facebook.com/omar.bitar.1997')} className="fa fa-facebook"> </a>
+      <a onClick={() => openInNewTab('https://www.youtube.com/channel/UCAk3PDdXPdoyl4ZzYiuggxA')} className="fa fa-youtube"> </a>
       <br />
       <div className='center'>
         <h2 className='floatLeft'> or send a message to this email: </h2> 
